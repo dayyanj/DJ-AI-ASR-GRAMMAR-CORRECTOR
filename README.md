@@ -30,18 +30,7 @@ Supports real-time captioning and assistive technologies
 ## Pretrained Models
 Models have been trained on DJ-AI Custom Dataset which includes over 90 million real and synthetic ASR errors and corrected texts pairs. The models are based on T5 pretrained models.
 
-
-## Installation
-
-```bash
-git clone https://github.com/<your_username>/asr_grammar_corrector.git
-cd asr_grammar_corrector
-pip install -r requirements.txt
-
-## Contributions
-
-If you want to fine-tune this model on your own data or improve the logic, feel free to open issues or PRs.
-
-## License
+SMALL | https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-t5-small
+BASE  | COMIMG SOON
 
 MIT License.
