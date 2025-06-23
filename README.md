@@ -98,7 +98,11 @@ $$\text{Token Accuracy (\%)} = \left( \frac{\text{Number of Matched Tokens}}{\te
 
 ## Pretrained Models
 Models have been trained on DJ-AI Custom Dataset which includes over 90 million real and synthetic ASR errors and corrected texts pairs. The models are based on T5 pretrained models.
-https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector
+https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-small
+https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-base
+
+## Demo
+DEMO: https://huggingface.co/spaces/dayyanj/dj-ai-asr-grammar-corrector-demo
 
 
 MIT License.
