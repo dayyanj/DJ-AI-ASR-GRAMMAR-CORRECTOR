@@ -57,8 +57,9 @@ A lightweight grammar correction model fine-tuned from `t5-small` and `t5-base`,
 ## Benchmark Results (10,000 real world noisy inputs used in benchmarking)
 | Model                                | Type | Precision | Latency (s/sample) | VRAM (MB) | BLEU  | ROUGE-L | Accuracy (%)¹ | Token Accuracy (%)² | Size (MB) |
 |--------------------------------------|------|-----------|--------------------|-----------|-------|---------|----------------|----------------------|-----------|
-| [dj-ai-asr-grammar-corrector-t5-small](https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-small) | HF   | fp32      | 0.1151             | 24.98     | 78.92 | 90.31   | 44.62          | 90.39                | 5956.76   |
-| [dj-ai-asr-grammar-corrector-t5-base](https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-base)  | HF   | fp32      | 0.0648             | 6.27      | 76.47 | 89.54   | 39.59          | 88.76                | 1620.15   |
+| [dj-ai-asr-grammar-corrector-t5-base](https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-base) | HF   | fp32      | 0.1151             | 24.98     | 78.92 | 90.31   | 44.62          | 90.39                | 5956.76   |
+| [dj-ai-asr-grammar-corrector-t5-small](https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-small) | HF   | fp32      | 0.0648             | 6.27      | 76.47 | 89.54   | 39.59          | 88.76                | 1620.15   |
+| [dj-ai-asr-grammar-corrector-t5-small-streaming](https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-small-streaming) | HF   | fp32      | 0.0634             | 14.77      | 76.25 | 89.61   | 39.90          | 88.54                | 1620.65   |
 
 
 1. Accuracy is a measure of how well the model performs across the full sentence. That is, a prediction is only counted as "correct" if the entire corrected sentence exactly matches the reference sentence. So if the model corrects 1 out of 2 errors, but the final output does not exactly match the expected sentence, it's counted as a fail.
@@ -98,9 +99,14 @@ $$\text{Token Accuracy (\%)} = \left( \frac{\text{Number of Matched Tokens}}{\te
 
 ## Pretrained Models
 Models have been trained on DJ-AI Custom Dataset which includes over 90 million real and synthetic ASR errors and corrected texts pairs. The models are based on T5 pretrained models.
+
 https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-small
 
+https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-small-streaming
+
 https://huggingface.co/dayyanj/dj-ai-asr-grammar-corrector-base
+
+
 
 ## Demo
 DEMO: https://huggingface.co/spaces/dayyanj/dj-ai-asr-grammar-corrector-demo
